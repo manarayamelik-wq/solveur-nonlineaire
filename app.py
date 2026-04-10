@@ -1,7 +1,7 @@
 import math
 import matplotlib.pyplot as plt
 import numpy as np
-
+import streamlit as st
 def f(x, expr):
     safe_dict = {
         "builtins": None,
@@ -60,7 +60,7 @@ def plot_function(expr, root=None):
     if root is not None:
         plt.scatter(root, f(root, expr))
     plt.title("Graph of f(x)")
-    plt.show()
+    st.pyplot(plt)
 
 print("حل المعادلة + رسم")
 
